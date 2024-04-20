@@ -9,6 +9,13 @@ map("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 map("n", "<leader>Q", ":qa<CR>", { desc = "Quit Nvchad" })
 map("n", "|", "<Cmd>vsplit<CR>", { desc = "Vertical Split" })
 map("n", "\\", "<Cmd>split<CR>", { desc = "Horizontal Split" })
+map("n", "]b", function()
+  require("nvchad.tabufline").next()
+end, { desc = "Buffer Goto next" })
+
+map("n", "[b", function()
+  require("nvchad.tabufline").prev()
+end, { desc = "Buffer Goto prev" })
 
 -- Movement enhancements
 map("n", "<S-l>", "$")
@@ -21,6 +28,10 @@ map("n", "<leader>pi", function() require("lazy").install() end, { desc = "Insta
 
 -- mason installer
 map("n", "<leader>pm", "<cmd>Mason<CR>", {desc = "Open Mason Installer"})
+
+
+
+
 
 -- Flutter and RSpec commands
 map("n", "<leader>rl", ":FlutterLspRestart<CR>", { desc = "Restart Flutter LSP" })
