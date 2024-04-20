@@ -23,11 +23,11 @@ return {
     lazy = false,
   },
   {
-    'akinsho/flutter-tools.nvim',
+    "akinsho/flutter-tools.nvim",
     lazy = false,
     dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim',   -- optional for vim.ui.select
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
     },
     config = function()
       require("flutter-tools").setup {
@@ -38,14 +38,14 @@ return {
   },
   {
     lazy = false,
-    'bronson/vim-trailing-whitespace'
+    "bronson/vim-trailing-whitespace",
   },
   {
     "kylechui/nvim-surround",
     lazy = false,
     config = function()
       require("nvim-surround").setup()
-    end
+    end,
   },
   {
     "folke/tokyonight.nvim",
@@ -57,9 +57,16 @@ return {
     "lewis6991/gitsigns.nvim",
     lazy = false,
     config = function()
-      require("gitsigns").setup({
+      require("gitsigns").setup {
         current_line_blame = true,
-      })
-    end
-  }
+      }
+    end,
+  },
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    config = function()
+      require "configs.auto-session"
+    end,
+  },
 }
