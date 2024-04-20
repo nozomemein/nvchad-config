@@ -32,6 +32,8 @@ map("n", "<leader>pm", "<cmd>Mason<CR>", {desc = "Open Mason Installer"})
 
 
 
+-- lazygit
+map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 
 -- Flutter and RSpec commands
 map("n", "<leader>rl", ":FlutterLspRestart<CR>", { desc = "Restart Flutter LSP" })
