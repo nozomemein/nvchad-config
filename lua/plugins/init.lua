@@ -50,7 +50,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 1000000,
     opts = {},
   },
   {
@@ -62,11 +62,13 @@ return {
       }
     end,
   },
-  {
-    "rmagatti/auto-session",
-    lazy = false,
-    config = function()
-      require "configs.auto-session"
-    end,
-  },
+  -- NOTE: auto-settionが原因でsytaxが効かなくなるのでコメントアウト
+  -- 解決するまでautosessionは使わない
+  -- {
+  --   "rmagatti/auto-session",
+  --   lazy = false,
+  --   config = function()
+  --     require "configs.auto-session"
+  --   end,
+  -- },
 }
