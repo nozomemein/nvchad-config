@@ -29,9 +29,6 @@ map("n", "<leader>pi", function() require("lazy").install() end, { desc = "Insta
 -- mason installer
 map("n", "<leader>pm", "<cmd>Mason<CR>", {desc = "Open Mason Installer"})
 
-
-
-
 -- lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 

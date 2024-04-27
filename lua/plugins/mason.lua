@@ -7,7 +7,8 @@ return {
           "lua_ls",
           "solargraph",
           "typescript-language-server",
-          "gopls"
+          "gopls",
+          "terraform-ls"
         }
       }
     }

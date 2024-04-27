@@ -12,6 +12,7 @@ return {
       "scss",
       "ruby",
       "go",
+      "terraform",
     }
   }
 }
