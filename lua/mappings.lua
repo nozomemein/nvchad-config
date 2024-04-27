@@ -32,6 +32,13 @@ map("n", "<leader>pm", "<cmd>Mason<CR>", {desc = "Open Mason Installer"})
 -- lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 
+
+-- diffview
+map("n", "<leader>gdo", "<cmd>DiffviewOpen<CR>", { desc = "DiffviewOpen" })
+map("n", "<leader>gdc", "<cmd>DiffviewClose<CR>", { desc = "DiffviewClose" })
+map("n", "<leader>gdb", "<cmd>DiffviewFileHistory<CR>", { desc = "Diffview on current branch" })
+map("n", "<leader>gdf", "<cmd>DiffviewFileHistory %<CR>", { desc = "Diffview on current file" })
+
 -- Flutter and RSpec commands
 map("n", "<leader>rl", ":FlutterLspRestart<CR>", { desc = "Restart Flutter LSP" })
 map("n", "<leader>rn", ":RSpecNearest<CR>", { desc = "Run nearest spec", silent = true })
