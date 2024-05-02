@@ -13,6 +13,7 @@ return {
       "ruby",
       "go",
       "terraform",
+      "c",
     }
   }
 }
