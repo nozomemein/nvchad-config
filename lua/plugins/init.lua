@@ -80,15 +80,34 @@ return {
   -- },
   {
     "kevinhwang91/nvim-ufo",
-    dependencies ={"kevinhwang91/promise-async"},
+    dependencies = { "kevinhwang91/promise-async" },
     lazy = false,
-    config = function ()
+    config = function()
       require('ufo').setup({
         provider_selector = function(bufnr, filetype, buftype)
-          return {'treesitter', 'indent'}
+          return { 'treesitter', 'indent' }
         end
       })
     end
   },
   { "sindrets/diffview.nvim", lazy = false },
+  {
+    "mogulla3/rspec.nvim",
+    lazy = false,
+    config = function()
+      require("rspec").setup {
+        -- Whether or not to open the quickfix window when the spec fails.
+        open_quickfix_when_spec_failed = true,
+      }
+    end
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      defaults = {
+        file_ignore_patterns = { "node_modules/", "vendor/" },
+      }
+    }
+  },
 }
