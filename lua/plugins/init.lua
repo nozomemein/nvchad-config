@@ -110,4 +110,7 @@ return {
       }
     }
   },
+  {
+    "monaqa/dial.nvim",
+  },
 }

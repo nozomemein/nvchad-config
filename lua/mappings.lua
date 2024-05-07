@@ -47,6 +47,23 @@ map("n", "<leader>rr", ":RSpecRerun<CR>", { desc = "Rerun spec", silent = true }
 map("n", "<leader>rF", ":RSpecOnlyFailures<CR>", { desc = "Run only failed spec", silent = true })
 map("n", "<leader>rs", ":RSpecShowLastResult<CR>", { desc = "Show spec results", silent = true })
 
+-- dial.nvim
+map("n", "<C-a>", function()
+    require("dial.map").manipulate("increment", "normal")
+end, { desc = "Increment number under cursor" })
+
+map("n", "<C-x>", function()
+    require("dial.map").manipulate("decrement", "normal")
+end, { desc = "Decrement number under cursor" })
+
+map("v", "<C-a>", function()
+    require("dial.map").manipulate("increment", "visual")
+end, { desc = "Increment number under visual" })
+
+map("v", "<C-x>", function()
+    require("dial.map").manipulate("decrement", "visual")
+end, { desc = "Decrement number under visual" })
+
 -- Copilot in insert mode
 map("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true, replace_keycodes = false })
 
