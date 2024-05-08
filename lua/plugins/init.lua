@@ -29,6 +29,7 @@ return {
     "noprompt/vim-yardoc",
     lazy = false,
   },
+  -- 様子見のためコメントアウト
   {
     "akinsho/flutter-tools.nvim",
     lazy = false,
@@ -38,8 +39,7 @@ return {
     },
     config = function()
       require("flutter-tools").setup {
-        fvm = true,
-        flutter_path = "/opt/homebrew/bin/dart", -- brewでinstallしたdartのパスにしないとLSPが動かない
+        fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
       }
     end,
   },

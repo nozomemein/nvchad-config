@@ -14,6 +14,7 @@ return {
       "go",
       "terraform",
       "c",
+      "dart",
     }
   }
 }
