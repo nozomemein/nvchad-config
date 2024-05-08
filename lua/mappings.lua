@@ -64,6 +64,9 @@ map("v", "<C-x>", function()
     require("dial.map").manipulate("decrement", "visual")
 end, { desc = "Decrement number under visual" })
 
+-- treesj
+map("n", "<leader>mt", "<cmd>lua require('treesj').toggle()<CR>", { desc = "Toggle Treesj" })
+
 -- Copilot in insert mode
 map("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true, replace_keycodes = false })
 
