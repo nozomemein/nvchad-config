@@ -15,6 +15,7 @@ return {
       "terraform",
       "c",
       "dart",
+      "graphql"
     }
   }
 }

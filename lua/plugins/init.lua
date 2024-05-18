@@ -29,20 +29,6 @@ return {
     "noprompt/vim-yardoc",
     lazy = false,
   },
-  -- 様子見のためコメントアウト
-  {
-    "akinsho/flutter-tools.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim", -- optional for vim.ui.select
-    },
-    config = function()
-      require("flutter-tools").setup {
-        fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
-      }
-    end,
-  },
   {
     lazy = false,
     "bronson/vim-trailing-whitespace",
