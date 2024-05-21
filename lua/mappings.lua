@@ -27,10 +27,20 @@ map("n", "<leader>pi", function() require("lazy").install() end, { desc = "Insta
 
 
 -- mason installer
-map("n", "<leader>pm", "<cmd>Mason<CR>", {desc = "Open Mason Installer"})
+map("n", "<leader>pm", "<cmd>Mason<CR>", { desc = "Open Mason Installer" })
 
 -- lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+
+-- LSP
+-- This overrids default mappings of Nvchad in theory.
+-- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua
+-- However, it seems default mappings are not working, so I will keep this.
+map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true, desc = "Show hover" })
+map('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc = "Jump to definition" })
+map('n', '<leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true, desc = "Open code actions" })
+map('x', '<leader>ca', '<Cmd>lua vim.lsp.buf.range_code_action()<CR>', { noremap = true, silent = true, desc = "Open code actions for selected range" })
+
 
 
 -- diffview
@@ -39,29 +49,31 @@ map("n", "<leader>gdc", "<cmd>DiffviewClose<CR>", { desc = "DiffviewClose" })
 map("n", "<leader>gdb", "<cmd>DiffviewFileHistory<CR>", { desc = "Diffview on current branch" })
 map("n", "<leader>gdf", "<cmd>DiffviewFileHistory %<CR>", { desc = "Diffview on current file" })
 
--- Flutter and RSpec commands
-map("n", "<leader>rl", ":FlutterLspRestart<CR>", { desc = "Restart Flutter LSP" })
+-- RSpec commands
 map("n", "<leader>rn", ":RSpecNearest<CR>", { desc = "Run nearest spec", silent = true })
 map("n", "<leader>rf", ":RSpecCurrentFile<CR>", { desc = "Run current file spec", silent = true })
 map("n", "<leader>rr", ":RSpecRerun<CR>", { desc = "Rerun spec", silent = true })
 map("n", "<leader>rF", ":RSpecOnlyFailures<CR>", { desc = "Run only failed spec", silent = true })
 map("n", "<leader>rs", ":RSpecShowLastResult<CR>", { desc = "Show spec results", silent = true })
 
+-- Flutter
+map("n", "<leader>rl", ":FlutterLspRestart<CR>", { desc = "Restart Flutter LSP" })
+
 -- dial.nvim
 map("n", "<C-a>", function()
-    require("dial.map").manipulate("increment", "normal")
+  require("dial.map").manipulate("increment", "normal")
 end, { desc = "Increment number under cursor" })
 
 map("n", "<C-x>", function()
-    require("dial.map").manipulate("decrement", "normal")
+  require("dial.map").manipulate("decrement", "normal")
 end, { desc = "Decrement number under cursor" })
 
 map("v", "<C-a>", function()
-    require("dial.map").manipulate("increment", "visual")
+  require("dial.map").manipulate("increment", "visual")
 end, { desc = "Increment number under visual" })
 
 map("v", "<C-x>", function()
-    require("dial.map").manipulate("decrement", "visual")
+  require("dial.map").manipulate("decrement", "visual")
 end, { desc = "Decrement number under visual" })
 
 -- treesj
@@ -72,4 +84,3 @@ map("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script
 
 -- Paste without yanking in visual mode
 map("x", "p", '"_dP', { desc = "Paste without yanking", silent = true })
-
