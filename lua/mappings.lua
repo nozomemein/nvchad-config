@@ -32,6 +32,10 @@ map("n", "<leader>pm", "<cmd>Mason<CR>", { desc = "Open Mason Installer" })
 -- lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 
+-- lazydocker
+map("n", "<leader>ld", "<cmd>Lazydocker<CR>", { desc = "LazyDocker" })
+
+
 -- LSP
 -- This overrids default mappings of Nvchad in theory.
 -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua
