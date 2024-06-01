@@ -98,10 +98,9 @@ map("n", "<leader>mt", "<cmd>lua require('treesj').toggle()<CR>", { desc = "Togg
 -- dap key maps
 map("n", "<F5>", ":lua require'dap'.continue()<CR>",
   { silent = true, desc = "Continue debugging or start if not started" })
---- TODO: wip for configuration
--- map("n", "<F10>", ":lua require'dap'.step_over()<CR>", { silent = true, desc = "Step over the current line of code" })
--- map("n", "<F11>", ":lua require'dap'.step_into()<CR>", { silent = true, desc = "Step into the function call" })
--- map("n", "<F12>", ":lua require'dap'.step_out()<CR>", { silent = true, desc = "Step out of the current function" })
+map("n", "<F9>", ":lua require'dap'.step_into()<CR>", { silent = true, desc = "Step into the function call" })
+map("n", "<F10>", ":lua require'dap'.step_over()<CR>", { silent = true, desc = "Step over the current line of code" })
+map("n", "<F12>", ":lua require'dap'.step_out()<CR>", { silent = true, desc = "Step out of the current function" })
 
 map("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>",
   { silent = true, desc = "Toggle breakpoint at the current line" })
