@@ -124,4 +124,11 @@ return {
     lazy = false,
     event = "BufRead", -- or any other event you might want to use.
   },
+  {
+    'numToStr/Comment.nvim',
+    lazy = false,
+    config = function()
+      require('Comment').setup()
+    end,
+  }
 }
