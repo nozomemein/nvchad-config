@@ -113,8 +113,9 @@ map("n", "<leader>l", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('
 -- dap-ui key maps
 map("n", "<leader>d", ":lua require'dapui'.toggle()<CR>", { silent = true, desc = "Toggle dap-ui" })
 
-
--- Copilot in insert mode
+-- Copilot
+map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
+map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Enable Copilot" })
 map("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true, replace_keycodes = false })
 
 -- Paste without yanking in visual mode
