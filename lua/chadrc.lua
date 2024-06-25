@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-	theme = "everforest",
+	theme = "chadracula",
   -- nvdash (dashboard)
   telescope = { style = "bordered" }, -- borderless / bordered
   statusline = {
