@@ -17,6 +17,11 @@ map("n", "[b", function()
   require("nvchad.tabufline").prev()
 end, { desc = "Buffer Goto prev" })
 
+map("n", "<leader>bx", function()
+  require("nvchad.tabufline").closeOtherBufs()
+end, { desc = "Close all buffers except current one" })
+
+
 -- Movement enhancements
 map("n", "<S-l>", "$")
 map("n", "<S-h>", "^")
