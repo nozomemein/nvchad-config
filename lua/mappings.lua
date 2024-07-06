@@ -123,5 +123,8 @@ map("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
 map("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Enable Copilot" })
 map("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true, replace_keycodes = false })
 
+-- ZenMode
+map("n", "<leader>zz", ":ZenMode<CR>", { desc = "ZenMode" })
+
 -- Paste without yanking in visual mode
 map("x", "p", '"_dP', { desc = "Paste without yanking", silent = true })

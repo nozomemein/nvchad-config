@@ -130,5 +130,9 @@ return {
     config = function()
       require('Comment').setup()
     end,
+  },
+  {
+    "folke/zen-mode.nvim",
+    lazy = false,
   }
 }
