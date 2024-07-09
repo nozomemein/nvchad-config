@@ -15,32 +15,32 @@ local M = {}
 
 M.override = {
   DiffAdd = {
-    fg = colors.green,
+    fg = colors.purple,
     bg = colors.background,
   },
 
   DiffChange = {
-    fg = colors.blue,
+    fg = colors.purple,
     bg = colors.background,
   },
 
   DiffDelete = {
-    fg = colors.red,
+    fg = colors.purple,
     bg = colors.background,
   },
 
   DiffText = {
-    fg = colors.yellow,
+    fg = colors.purple,
     bg = colors.background,
   },
 
   DiffAdded = {
-    fg = colors.green,
+    fg = colors.purple,
     bg = colors.background,
   },
 
   DiffRemoved = {
-    fg = colors.red,
+    fg = colors.purple,
     bg = colors.background,
   },
 
@@ -59,5 +59,18 @@ M.override = {
     bg = colors.background,
   },
 }
+
+function M.setup()
+  for group, opts in pairs(M.override) do
+    local cmd = 'highlight ' .. group
+    if opts.fg then
+      cmd = cmd .. ' guifg=' .. opts.fg
+    end
+    if opts.bg then
+      cmd = cmd .. ' guibg=' .. opts.bg
+    end
+    vim.cmd(cmd)
+  end
+end
 
 return M

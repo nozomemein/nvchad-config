@@ -20,6 +20,8 @@ map("n", "<leader>bx", function()
   require("nvchad.tabufline").closeOtherBufs()
 end, { desc = "Close all buffers except current one" })
 
+map("n", "<leader>rh", function() require("highlights").setup() end, { desc = "Reload Highlights" })
+
 
 -- Movement enhancements
 map("n", "<S-l>", "$")
