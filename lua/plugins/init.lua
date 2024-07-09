@@ -134,5 +134,13 @@ return {
   {
     "folke/zen-mode.nvim",
     lazy = false,
+  },
+  {
+    'akinsho/git-conflict.nvim',
+    version = "*",
+    lazy = false,
+    config = function ()
+      require("git-conflict").setup()
+    end
   }
 }
