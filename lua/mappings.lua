@@ -56,7 +56,10 @@ map('x', '<leader>ca', '<Cmd>lua vim.lsp.buf.range_code_action()<CR>',
 
 
 -- diffview
-map("n", "<leader>gdo", "<cmd>DiffviewOpen<CR>", { desc = "DiffviewOpen" })
+map("n", "<leader>gdo", function()
+  require("highlights").setup() -- Highlight refresh is required
+  vim.cmd("DiffviewOpen")
+end, { desc = "DiffviewOpen" })
 map("n", "<leader>gdc", "<cmd>DiffviewClose<CR>", { desc = "DiffviewClose" })
 map("n", "<leader>gdb", "<cmd>DiffviewFileHistory<CR>", { desc = "Diffview on current branch" })
 map("n", "<leader>gdf", "<cmd>DiffviewFileHistory %<CR>", { desc = "Diffview on current file" })
