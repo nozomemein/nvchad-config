@@ -135,4 +135,8 @@ return {
     "folke/zen-mode.nvim",
     lazy = false,
   },
+  {
+    "qnighy/lalrpop.vim",
+    lazy = false,
+  }
 }
