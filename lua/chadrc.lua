@@ -8,7 +8,7 @@ local M = {}
 local highlights = require "highlights"
 
 M.ui = {
-  theme = "tokyonight",
+  theme = "nord",
   -- nvdash (dashboard)
   telescope = { style = "bordered" }, -- borderless / bordered
   statusline = {
