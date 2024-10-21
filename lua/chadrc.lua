@@ -1,56 +1,44 @@
--- This file  needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
+-- This file needs to have same structure as nvconfig.lua
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+-- Please read that file to know all available options :(
 
--- local colors = require("base46").get_theme_tb "base_30"
 ---@type ChadrcConfig
 local M = {}
-
 local highlights = require "highlights"
 
-M.ui = {
-  theme = "nord",
-  -- nvdash (dashboard)
-  telescope = { style = "bordered" }, -- borderless / bordered
-  statusline = {
-    theme = "vscode_colored",         -- default/vscode/vscode_colored/minimal
-    -- default/round/block/arrow separators work only for default statusline theme
-    -- round and block will work for minimal theme only
-    separator_style = "default",
-    overriden_modules = nil,
-  },
-
+M.base46 = {
+  theme = "monochrome",
   hl_override = highlights.hl_override,
 
+  -- hl_override = {
+  -- 	Comment = { italic = true },
+  -- 	["@comment"] = { italic = true },
+  -- },
+}
+
+M.ui = {
   -- lazyload it when there are 1+ buffers
   tabufline = {
-    show_numbers = false,
     enabled = true,
     lazyload = true,
-    overriden_modules = nil,
+    order = { "treeOffset", "buffers", "tabs", "btns" },
+    modules = nil,
   },
-  nvdash = {
-    load_on_startup = true,
+}
 
-    header = {
-      "                                                   ",
-      "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
-      "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
-      "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
-      "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
-      "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
-      "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
-      "                                                   ",
-    },
+M.nvdash = {
+  load_on_startup = true,
 
-    buttons = {
-      -- { "  Sessions", "Spc S", "Telescope session-lens" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "  Find Files", "Spc f f", "Telescope files" },
-      { "󰈭  Find Word", "Spc f w", "<cmd>lua require 'telescope'.extensions.live_grep_args.live_grep_args()<CR>" },
-      { "  Bookmarks", "Spc m a", "<cmd>lua require 'telescope'.extensions.vim_bookmarks.all()<cr>" },
-    },
+  header = {
+    "                                                   ",
+    "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
+    "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
+    "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
+    "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
+    "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
+    "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
+    "                                                   ",
   },
-
 }
 
 return M
