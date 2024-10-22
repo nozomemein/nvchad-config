@@ -33,33 +33,18 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
       "olimorris/neotest-rspec",
+      { "fredrikaverpil/neotest-golang", version = "*" }, -- Installation
     },
     config = function()
       require("neotest").setup({
         -- rspec adapter
         adapters = {
           get_rspec_adapter(),
+          require("neotest-golang"), -- Registration
           -- add here if you want to use other adapters
           -- get_xxx_adapter(),
         },
       })
     end
-  },
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      { "fredrikaverpil/neotest-golang", version = "*" }, -- Installation
-    },
-    config = function()
-      require("neotest").setup({
-        adapters = {
-          require("neotest-golang"), -- Registration
-        },
-      })
-    end,
   },
 }
