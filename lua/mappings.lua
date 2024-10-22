@@ -17,7 +17,7 @@ map("n", "[b", function()
 end, { desc = "Buffer Goto prev" })
 
 map("n", "<leader>bx", function()
-  require("nvchad.tabufline").closeOtherBufs()
+  require("nvchad.tabufline").closeAllBufs()
 end, { desc = "Close all buffers except current one" })
 
 map("n", "<leader>rh", function() require("highlights").setup() end, { desc = "Reload Highlights" })
