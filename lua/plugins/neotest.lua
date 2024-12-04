@@ -32,7 +32,7 @@ return {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "olimorris/neotest-rspec",
+      {"olimorris/neotest-rspec", commit = "53fc108a06ae43d7f873d42ee5189c2301e33623"},
       { "fredrikaverpil/neotest-golang", version = "*" }, -- Installation
     },
     config = function()
