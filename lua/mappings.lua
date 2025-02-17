@@ -21,6 +21,7 @@ map("n", "<leader>bx", function()
 end, { desc = "Close all buffers except current one" })
 
 map("n", "<leader>rh", function() require("highlights").setup() end, { desc = "Reload Highlights" })
+map("n", "<leader>tt", ":lua require('base46').toggle_transparency()<CR>", { noremap = true, silent = true, desc = "Toggle Background Transparency" })
 
 
 -- Movement enhancements
