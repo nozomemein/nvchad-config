@@ -6,7 +6,7 @@ local capabilities = configs.capabilities
 
 -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "solargraph", "clangd", "rust_analyzer", "gopls" }
+local servers = { "html", "cssls", "solargraph", "clangd", "rust_analyzer", "gopls", "tailwindcss" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do

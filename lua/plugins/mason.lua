@@ -8,6 +8,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "solargraph",
+          "tailwindcss-language-server",
           "typescript-language-server",
           "gopls",
           "terraform-ls",
