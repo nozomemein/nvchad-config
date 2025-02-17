@@ -4,13 +4,13 @@
 
 return {
   "nvim-tree/nvim-tree.lua",
-  lazy = false,
-  config = function()
-    require("nvim-tree").setup {
+  cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+  opts = function()
+    local defaults = require "nvchad.configs.nvimtree"
+    return vim.tbl_deep_extend("force", defaults, {
       view = {
         side = "right",
       }
-    }
-  end
+    })
+  end,
 }
-
