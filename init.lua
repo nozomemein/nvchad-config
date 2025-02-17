@@ -37,3 +37,6 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- set transparent background
+require("base46").toggle_transparency()
