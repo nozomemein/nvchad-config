@@ -3,6 +3,7 @@ local options = {
     lua = { "stylua" },
     go = { 'goimports' },
     rust = { 'rustfmt' },
+    eruby = { 'erb-formatter' },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
