@@ -13,10 +13,10 @@ return {
       require "configs.conform"
     end,
   },
-  {
-    "github/copilot.vim",
-    lazy = false,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  -- },
   {
     "slim-template/vim-slim",
     lazy = false,
