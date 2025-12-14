@@ -42,6 +42,38 @@ map("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
 -- lazydocker
 map("n", "<leader>ld", "<cmd>Lazydocker<CR>", { desc = "LazyDocker" })
 
+-- telescope
+map("n", "<leader>fc", function()
+  local dropdown = require("telescope.themes").get_dropdown {
+    previewer = false,
+    layout_config = { width = 0.5, height = 0.6 },
+    prompt_title = "Commands",
+  }
+  local displayer = require("telescope.pickers.entry_display").create {
+    separator = " ",
+    items = {
+      { width = 0.35 },
+      { remaining = true },
+    },
+  }
+
+  dropdown.entry_maker = function(entry)
+    local desc = (entry.definition or ""):gsub("\n", " ")
+    return {
+      value = entry,
+      ordinal = entry.name .. " " .. desc,
+      display = function()
+        return displayer {
+          { entry.name, "TelescopeResultsIdentifier" },
+          desc,
+        }
+      end,
+    }
+  end
+
+  require("telescope.builtin").commands(dropdown)
+end, { desc = "Find & run Vim command" })
+
 
 -- LSP
 -- This overrids default mappings of Nvchad in theory.
