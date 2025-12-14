@@ -21,7 +21,8 @@ map("n", "<leader>bx", function()
 end, { desc = "Close all buffers except current one" })
 
 map("n", "<leader>rh", function() require("highlights").setup() end, { desc = "Reload Highlights" })
-map("n", "<leader>tt", ":lua require('base46').toggle_transparency()<CR>", { noremap = true, silent = true, desc = "Toggle Background Transparency" })
+map("n", "<leader>tt", ":lua require('base46').toggle_transparency()<CR>",
+  { noremap = true, silent = true, desc = "Toggle Background Transparency" })
 
 
 -- Movement enhancements
@@ -168,3 +169,10 @@ map("n", "<leader>zz", ":ZenMode<CR>", { desc = "ZenMode" })
 
 -- Paste without yanking in visual mode
 map("x", "p", '"_dP', { desc = "Paste without yanking", silent = true })
+
+-- LeetCode
+map("n", "<leader>lm", ":Leet<CR>", { desc = "[LeetCode] Menu" })
+map("n", "<leader>lt", ":Leet tabs<CR>", { desc = "[LeetCode] Tabs" })
+map("n", "<leader>ll", ":Leet list<CR>", { desc = "[LeetCode] List" })
+map("n", "<leader>lr", ":Leet run<CR>", { desc = "[LeetCode] Run" })
+map("n", "<leader>ls", ":Leet submit<CR>", { desc = "[LeetCode] Submit" })
