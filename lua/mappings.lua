@@ -173,6 +173,7 @@ map("x", "p", '"_dP', { desc = "Paste without yanking", silent = true })
 -- LeetCode
 map("n", "<leader>lm", ":Leet<CR>", { desc = "[LeetCode] Menu" })
 map("n", "<leader>lt", ":Leet tabs<CR>", { desc = "[LeetCode] Tabs" })
+map("n", "<leader>lc", ":Leet console<CR>", { desc = "[LeetCode] Console" })
 map("n", "<leader>ll", ":Leet list<CR>", { desc = "[LeetCode] List" })
 map("n", "<leader>lr", ":Leet run<CR>", { desc = "[LeetCode] Run" })
 map("n", "<leader>ls", ":Leet submit<CR>", { desc = "[LeetCode] Submit" })

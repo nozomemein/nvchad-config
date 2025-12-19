@@ -1,7 +1,7 @@
 #!/bin/sh
 
 for f in *.rs; do
-    crates="${crates}${next}{\"root_module\": \"$f\",\"edition\": \"2021\",\"deps\": []}"
+    crates="${crates}${next}{\"root_module\": \"$f\",\"edition\": \"2024\",\"deps\": []}"
     next=","
 done
 
